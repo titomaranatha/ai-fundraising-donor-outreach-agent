@@ -1,0 +1,12 @@
+flowchart TB
+    SRC["Public sources (unverified)"] --> DISC["Discovery and research"]
+    DISC --> QUAL["Qualification and prioritisation"]
+    QUAL --> GEN["Email generation"]
+    GEN --> REV["Review and prepare"]
+    REV --> OWNER{{"Owner approval"}}
+    OWNER -->|approved| SEND["Email delivery"]
+    OWNER -->|rejected or edited| GEN
+    SEND --> TRACK["Response tracking"]
+    TRACK --> REC[("Outreach records")]
+    REC --> FU["Follow-up management"]
+    FU --> OWNER

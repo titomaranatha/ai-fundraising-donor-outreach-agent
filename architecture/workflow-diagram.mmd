@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant S as System
+    participant O as Owner
+    participant P as Prospect
+    S->>S: Discover and research prospects
+    S->>S: Extract opportunities
+    S->>S: Qualify and prioritise
+    S->>S: Generate personalised email
+    S->>O: Request approval
+    alt Approved
+        O-->>S: Approve
+        S->>P: Send email
+        P-->>S: Response, if any
+        S->>S: Record and plan follow-up
+    else Rejected or edited
+        O-->>S: Edit or reject
+        S->>S: Revise or discard
+    end
